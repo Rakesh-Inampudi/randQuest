@@ -3,13 +3,15 @@
 one:
   firstname: MyString
   lastname: MyString
-  address: MyString
+  course: MyString
+  studentno: MyString
   mobile: MyString
   user_id: 
 
 two:
   firstname: MyString
   lastname: MyString
-  address: MyString
+  course: MyString
+  studentno: MyString
   mobile: MyString
   user_id: 

@@ -3,7 +3,8 @@ class CreateProfiles < ActiveRecord::Migration
     create_table :profiles do |t|
       t.string :firstname
       t.string :lastname
-      t.string :address
+      t.string :course
+      t.string :studentno
       t.string :mobile
       t.references :user, index: true
 

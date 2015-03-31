@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306163839) do
+ActiveRecord::Schema.define(version: 20150327173849) do
 
   create_table "profiles", force: true do |t|
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "address"
+    t.string   "course"
+    t.string   "studentno"
     t.string   "mobile"
     t.integer  "user_id"
     t.datetime "created_at"

@@ -2,16 +2,15 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
-def myprofile 
- profile = Profile.find_by_user_id(current_user.id)
+def myprofile
+profile = Profile.find_by_user_id(current_user.id)
 if profile.nil?
 redirect_to "/profiles/new"
 else
 @user = User.find(current_user.id)
 @profile = Profile.find_by_user_id(@user.id)
 redirect_to "/profiles/#{@profile.id}"
-
-end 
+end
 end
   def index
     @profiles = Profile.all
@@ -22,14 +21,12 @@ end
     respond_with(@profile)
   end
 
-    # GET /profiles/new
+ # GET /profiles/new
 def new
 @user = User.find(current_user.id)
 @profile = Profile.new
 @profile.user_id = @user.id
 end
-
-
   def edit
   end
 
@@ -55,7 +52,6 @@ end
     end
 
     def profile_params
-      params.require(:profile).permit(:firstname, :lastname, :address, :mobile, :user_id)
+      params.require(:profile).permit(:firstname, :lastname, :course, :studentno, :mobile, :user_id)
     end
-
 end
