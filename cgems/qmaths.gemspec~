@@ -1,0 +1,11 @@
+Gem::Specification.new do |s|
+s.name = 'levels'
+s.version = '0.0.0'
+s.date = '2015-03-31'
+s.summary = "Increasing level to generate Questions"
+s.description = "A simple gem"
+s.authors = ["rakesh"]
+s.email = 'raks@email.ie'
+#s.homepage = 'http://rubygems.org/gems/'
+s.files = ["lib/levels.rb"]
+end

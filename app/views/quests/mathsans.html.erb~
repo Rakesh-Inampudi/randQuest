@@ -1,0 +1,13 @@
+
+<h2>your input:<%= @input1 %> was <%= @result %><h2>
+<h3>Answer the following Question</h3>
+Level:<%= label_tag :level_label_string, @level%>
+<%=hidden_field_tag :level_string%>
+<h1><%=@questi%>=?</h1>
+<%= form_tag "/mathsans" do %>
+<%= text_field_tag :search_string %>
+<%= submit_tag "Submit" %>
+<%= hidden_field_tag :answer_string, @ans%>
+Answer Count:<%=label_tag :count_label_string, @count%>
+<%=hidden_field_tag :count_string, @count%>
+<% end %>

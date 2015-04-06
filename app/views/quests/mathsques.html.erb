@@ -1,0 +1,12 @@
+
+<h2>Welcome to Maths Quest</h2>
+Level:<%= label_tag :level_label_string, @level%>
+<%=hidden_field_tag :level_string%>
+<h1><%=@questi%>=?</h1>
+<%= form_tag "/mathsans" do %>
+<%= text_field_tag :search_string %>
+<%= submit_tag "Submit" %><br>
+<%= hidden_field_tag :answer_string, @ans%>
+<br>Answer Count:<%=label_tag :count_label_string, @count%>
+<%=hidden_field_tag :count_string, @count%>
+<% end %>

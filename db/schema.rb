@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327173849) do
+ActiveRecord::Schema.define(version: 20150401122437) do
 
   create_table "profiles", force: true do |t|
     t.string   "firstname"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20150327173849) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
+  create_table "quests", force: true do |t|
+    t.string   "question"
+    t.integer  "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -50,9 +50,9 @@
         <a class="navbar-brand" href="#">RandQuest</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Profile", "/path1"  %></li>
-            <li><%= link_to "Quest", "/path2"  %></li>
-            <li><%= link_to "Logout", "/path3"  %></li>
+            <li><%= link_to "Sign in", "/users/sign_in"  %></li>
+	    <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete%></li>
+            <li><%= link_to 'Register', new_user_registration_path %></li>
           </ul>
         </div>
       </div>
